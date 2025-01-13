@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href=".">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/rules_page.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Page Title -->
+    <title>Kneipenguessr - Rules</title>
+</head>
+<body, class="hidden">
+    <!-- Header -->
+    <header>
+        <div id="main_header" class="row">
+            <h1 id="game_title">KneipenGuessr</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main_container">
+        <section id="nav_container" class="column">
+            <!-- Rules Text -->
+            <div id="text_column" class="column">
+                <h2>How to Play Kneipenguessr</h2>
+                <p id="subtitle">The goal is simple: guess which bar is closer to your location!</p>
+                <p class="description">
+                    1. The game will use your device's geolocation feature to determine your current position.
+                </p>
+                <p class="description">
+                    2. Two bars will be displayed on the screen. Your task is to pick the one closer to you.
+                </p>
+                <p class="description">
+                    3. If you choose correctly, the closer bar stays, and a new one is introduced. Keep going and test your bar proximity skills!
+                </p>
+                <p class="description">
+                    4. If you guess wrong, the game ends, and your score is displayed.
+                </p>
+            </div>
+
+            <!-- Navigation Button -->
+            <div id="buttonContainer" class="row">
+                <button id="home_button" class="menu_button" onclick="goHome()">Home</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

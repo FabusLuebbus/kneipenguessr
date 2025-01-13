@@ -1,0 +1,194 @@
+html {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    background-color: #1c1c1c;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+}
+
+header {
+    height: auto;
+    margin: 0;
+    color: #ffffff;
+    background-color: #252525;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    color: #DB9C5D;
+    margin: 0;
+    text-align: center;
+}
+
+#header_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+#main_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+#nav_container {
+    width: 75%;
+    background-color: #252525;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#text_column {
+    text-align: center;
+}
+
+#text_row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#game_title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    color: #DB9C5D;
+    cursor: pointer;
+    text-align: center;
+}
+
+#subtitle {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+#bar_img {
+    width: 128px;
+    height: 128px;
+}
+
+#buttonContainer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu_button {
+    width: 40%;
+    max-width: 250px;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #DB9C5D;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu_button:hover {
+    background-color: #ff9800;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+/* Fade-in effect */
+.fade-in {
+    animation: fadeIn 0.2s forwards;
+}
+
+/* Fade-out effect */
+.fade-out {
+    animation: fadeOut 0.2s forwards;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fade-out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header_content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nav_container {
+        width: 90%;
+    }
+
+    #buttonContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu_button {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #subtitle {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    #game_title {
+        font-size: 40px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+}
