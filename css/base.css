@@ -147,7 +147,6 @@ h2 {
 }
 
 /* Step 2: Orient rows into columns for narrow screens */
-/* Step 2: Orient rows into columns for narrow screens */
 @media screen and (max-width: 600px) {
   header {
     flex-direction: row;
