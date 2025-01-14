@@ -108,9 +108,9 @@ async function initializeGame() {
         userLatitude,
         userLongitude,
         bar.coordinates.latitude,
-        bar.coordinates.longitude
+        bar.coordinates.longitude,
       ),
-    }))
+    })),
   );
 
   bars = new Queue();
@@ -131,7 +131,7 @@ async function initializeGame() {
     bar2.distance.toFixed(2) + " km";
 
   countdown = new CountdownTimer("timer1", 10, () =>
-    showGameOver("Time's up!")
+    showGameOver("Time's up!"),
   );
   countdown.start();
 }

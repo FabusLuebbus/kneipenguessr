@@ -12,10 +12,10 @@ export function getUserLocation() {
         (error) => {
           // Alerts the user and rejects the promise if geolocation access fails
           alert(
-            error.message + "Geolocation access is required to play the game."
+            error.message + "Geolocation access is required to play the game.",
           );
           reject(error);
-        }
+        },
       );
     } else {
       // Handles the case where geolocation is not supported by the browser
