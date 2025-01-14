@@ -1,5 +1,5 @@
-const canvas = document.getElementById('confetti');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("confetti");
+const ctx = canvas.getContext("2d");
 
 // Set canvas size
 canvas.width = window.innerWidth;
@@ -17,7 +17,7 @@ class ConfettiParticle {
     this.speedX = random(-10, 10); // Reduced horizontal spread for slower movement
     this.speedY = random(-7, -20); // Increased negative value for higher fly
     this.gravity = 0.15; // Reduced gravity for slower fall
-    this. maxSpeedY = 5; // Reduced max speed for slower fall
+    this.maxSpeedY = 5; // Reduced max speed for slower fall
     this.rotation = random(0, 360);
     this.rotationSpeed = random(-2, 2); // Slower rotation speed
     this.opacity = 1;
@@ -83,11 +83,8 @@ export const animate = () => {
   }
 };
 
-
 // Handle window resize
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
-
-

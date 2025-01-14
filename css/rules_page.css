@@ -1,37 +1,24 @@
 html {
-    height: 100%;
-    overflow: auto;
+  height: 100%;
+  overflow: auto;
 }
 
 body {
-    background-color: #1c1c1c;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-}
-
-#subtitle {
-    font-size: 20px;
-    color: #eeeeee;
-    font-weight: 500;
-    margin: 10px 0 20px;
-    background-color: #444;
-    padding: 10px;
-    border-radius: 5px;
+  background-color: #1c1c1c;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
 }
 
 .description {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: left;
-    padding: 10px;
-    background-color: #333;
-    border-radius: 8px;
-    width: 90%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 8px;
+  width: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-
-

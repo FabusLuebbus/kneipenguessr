@@ -1,59 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- Meta Information -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href=".">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="." />
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/game_style.css">
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/game_style.css" />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Page Title -->
     <title>Kneipenguessr - Play</title>
-</head>
-<body, class="hidden">
-
+  </head>
+  <body class="hidden">
     <!-- Header -->
     <header>
-        <div id="main_header" class="row">
-            <h1 id="game_title">KneipenGuessr</h1>
-        </div>
+      <div id="header_content" class="row">
+        <img id="logo" src="../logo.png" alt="KneipenGuessr Logo" />
+        <h1 id="game_title">KneipenGuessr</h1>
+      </div>
     </header>
 
-       <!-- Easy Mode Toggle Switch -->
+    <!-- Easy Mode Toggle Switch -->
     <div class="toggle-container">
-        <label for="easyModeToggle">Easy Mode:</label>
-        <input type="checkbox" id="easyModeToggle" onchange="setEasyMode(this.checked)">
+      <label for="easyModeToggle">Easy Mode:</label>
+      <input
+        type="checkbox"
+        id="easyModeToggle"
+        onchange="setEasyMode(this.checked)"
+      />
     </div>
 
     <!-- Main Container -->
     <main id="main_container">
-        <!-- Bar Option 1 -->
-        <div id="bar1" class="bar_container" onclick="chooseBar(this)">
-            <h2 class="bar_name">Bar Name 1</h2>
-            <p class="bar_distance hidden_bar_dist" id="distance1">Distance: Calculating...</p>
-        </div>
+      <!-- Bar Option 1 -->
+      <div id="bar1" class="bar_container" onclick="chooseBar(this)">
+        <h2 class="bar_name">Bar Name 1</h2>
+        <p class="bar_distance hidden_bar_dist" id="distance1">
+          Distance: Calculating...
+        </p>
+      </div>
 
-        <!-- Timer for Option 1 -->
-        <div id="timer1" class="circle-container">
-            <svg class="progress-ring" width="120" height="120">
-                <circle class="ring-bg" cx="60" cy="60" r="54"></circle>
-                <circle class="ring-progress" cx="60" cy="60" r="54"></circle>
-            </svg>
-            <div class="timer-text">10</div>
-        </div>
+      <!-- Timer -->
+      <div id="timer1" class="circle-container">
+        <svg class="progress-ring" width="120" height="120">
+          <circle class="ring-bg" cx="60" cy="60" r="54"></circle>
+          <circle class="ring-progress" cx="60" cy="60" r="54"></circle>
+        </svg>
+        <div class="timer-text">10</div>
+      </div>
 
-        <!-- Bar Option 2 -->
-        <div id="bar2" class="bar_container" onclick="chooseBar(this)">
-            <h2 class="bar_name">Bar Name 2</h2>
-            <p class="bar_distance hidden_bar_dist" id="distance2">Distance: Calculating...</p>
-        </div>
+      <!-- Bar Option 2 -->
+      <div id="bar2" class="bar_container" onclick="chooseBar(this)">
+        <h2 class="bar_name">Bar Name 2</h2>
+        <p class="bar_distance hidden_bar_dist" id="distance2">
+          Distance: Calculating...
+        </p>
+      </div>
     </main>
 
     <!-- Confetti Canvas -->
@@ -61,15 +72,15 @@
 
     <!-- Popup Dialog -->
     <div id="popup" class="popup hidden">
-        <div class="popup-content column">
-            <h2 id="popup-title"></h2>
-            <p id="popup-message"></p>
-            <p id="popup-score"></p>
-            <div id="buttonContainer" class="row">
-                <button id="play_button" class="menu_button">Start Game</button>
-                <button id="rules_button" class="menu_button">Game Rules</button>
-            </div>
+      <div class="popup-content column">
+        <h2 id="popup-title"></h2>
+        <p id="popup-message"></p>
+        <p>Your Score: <span id="popup-score">50</span></p>
+        <div id="buttonContainer" class="row">
+          <button id="play_button" class="menu_button">Start Game</button>
+          <button id="rules_button" class="menu_button">Game Rules</button>
         </div>
+      </div>
     </div>
 
     <!-- Scripts -->
@@ -77,5 +88,5 @@
     <script type="module" src="../js/confetti.js"></script>
     <script type="module" src="../js/popup.js"></script>
     <script type="module" src="../js/navigation.js"></script>
-</body>
+  </body>
 </html>

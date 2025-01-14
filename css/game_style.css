@@ -1,280 +1,296 @@
 #main_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .bar_container {
-    background-color: #333333;
-    border: 2px solid #444444;
-    border-radius: 12px;
-    width: 25%;
-    max-width: 300px;
-    aspect-ratio: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
+  background-color: #333333;
+  border: 2px solid #444444;
+  border-radius: 12px;
+  width: 25%;
+  max-width: 300px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background-color 0.3s;
 }
 
 .bar_container:hover {
-    transform: scale(1.05);
-    background-color: #444444;
+  transform: scale(1.05);
+  background-color: #444444;
 }
 
 .bar_name {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #cccccc;
 }
 
 .bar_distance {
-    font-size: 16px;
-    color: #cccccc;
+  font-size: 16px;
+  color: #cccccc;
 }
 
 .hidden_bar_dist {
-    display: none;
+  display: none;
 }
 
 #countdown_container {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 #progress_circle {
-    width: 100%;
-    height: 100%;
-    border: 8px solid #444;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: conic-gradient(#ff9800 0%, #252525 0%);
-    animation: countdown-animation 10s linear;
+  width: 100%;
+  height: 100%;
+  border: 8px solid #444;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(#ff9800 0%, #252525 0%);
+  animation: countdown-animation 10s linear;
 }
 
 #countdown {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
 }
-
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-    .bar_container {
-        width: 40%;
-    }
+@media screen and (max-width: 900px) {
+  #main_container {
+    font-size: 90%;
+  }
 
-    #countdown_container {
-        width: 80px;
-        height: 80px;
-    }
+  .bar_container {
+    width: 40%;
+  }
 
-    #countdown {
-        font-size: 20px;
-    }
+  #countdown_container {
+    width: 80px;
+    height: 80px;
+  }
+
+  #countdown {
+    font-size: 20px;
+  }
 }
 
-@media screen and (max-width: 480px) {
-    #main_container {
-        flex-direction: column;
-    }
+@media screen and (max-width: 600px) {
+  #main_container {
+    flex-direction: column;
+    font-size: 80%;
+  }
 
-    .bar_container {
-        width: 60%;
-    }
+  .bar_container {
+    width: 60%;
+  }
 
-    #countdown_container {
-        width: 70px;
-        height: 70px;
-    }
+  #countdown_container {
+    width: 70px;
+    height: 70px;
+  }
 
-    #countdown {
-        font-size: 18px;
-    }
+  #countdown {
+    font-size: 18px;
+  }
+
+  /* Adjust Toggle Container Position */
+  .toggle-container {
+    display: none;
+  }
 }
 
 .circle-container {
-    position: relative;
-    width: 120px;
-    height: 120px;
+  position: relative;
+  color: #cccccc;
+  width: 120px;
+  height: 120px;
 }
 
 .progress-ring {
-    transform: rotate(-90deg);
-    overflow: visible;
+  transform: rotate(-90deg);
+  overflow: visible;
 }
 
 .ring-bg,
 .ring-progress {
-    fill: none;
-    stroke-width: 12;
-    cx: 60;
-    cy: 60;
-    r: 54;
+  fill: none;
+  stroke-width: 12;
+  cx: 60;
+  cy: 60;
+  r: 54;
 }
 
 .ring-bg {
-    stroke: #333;
+  stroke: #333;
 }
 
 .ring-progress {
-    stroke: green;
-    stroke-linecap: round;
-    stroke-dasharray: 339.292; /* Circumference of the circle */
-    stroke-dashoffset: 0;
-    transition: stroke 0.2s linear;
+  stroke: green;
+  stroke-linecap: round;
+  stroke-dasharray: 339.292; /* Circumference of the circle */
+  stroke-dashoffset: 0;
+  transition: stroke 0.2s linear;
 }
 
 .timer-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
 }
 
 /* Keyframes for pop-up animation */
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-@keyframes fadeOut {
-from {
-    opacity: 1;
-    transform: scale(1);
-}
-to {
+  from {
     opacity: 0;
     transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
 }
 
 /* Apply animation when showing */
 .popup.show {
-animation: fadeIn 0.3s ease-out forwards;
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 /* Apply animation when hiding */
 .popup.hide {
-animation: fadeOut 0.3s ease-in forwards;
+  animation: fadeOut 0.3s ease-in forwards;
 }
 
-/* Pop-up container (no changes here) */
 .popup {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.5);
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 999;
-opacity: 0; /* Ensure it's invisible by default */
-pointer-events: none; /* Prevent interaction while hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0; /* Ensure it's invisible by default */
+  pointer-events: none; /* Prevent interaction while hidden */
 }
 
-/* Pop-up content (no changes here) */
 .popup-content {
-background: #252525;
-padding: 20px;
-border-radius: 10px;
-text-align: center;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-max-width: 90%;
-width: 400px;
+  color: #cccccc;
+  background: #252525;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 400px;
 }
 
 /* Show the pop-up (make it visible) */
 .popup.show {
-opacity: 1;
-pointer-events: all;
-}
-
-.close-button {
-cursor: pointer;
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* Confetti Canvas Styling */
 #confetti {
-    pointer-events: none; /* Allows interaction with elements underneath */
-    position: fixed; /* Ensures the canvas stays in place even during scrolling */
-    top: 0;
-    left: 0;
-    width: 100%; /* Covers the entire viewport horizontally */
-    height: 100%; /* Covers the entire viewport vertically */
-    z-index: 1000 /* Places the canvas above other elements */
+  pointer-events: none; /* Allows interaction with elements underneath */
+  position: fixed; /* Ensures the canvas stays in place even during scrolling */
+  top: 0;
+  left: 0;
+  width: 100%; /* Covers the entire viewport horizontally */
+  height: 100%; /* Covers the entire viewport vertically */
+  z-index: 1000; /* Places the canvas above other elements */
 }
 
 #easyModeToggle {
-    appearance: none;
-    width: 50px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 15px;
-    position: relative;
-    outline: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  appearance: none;
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #easyModeToggle:checked {
-    background-color: #DB9C5D;
+  background-color: #db9c5d;
 }
 
 #easyModeToggle::before {
-    content: '';
-    width: 23px;
-    height: 23px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    transition: transform 0.3s ease;
+  content: "";
+  width: 23px;
+  height: 23px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
 }
 
 #easyModeToggle:checked::before {
-    transform: translateX(25px);
+  transform: translateX(25px);
 }
 
 label[for="easyModeToggle"] {
-    font-size: 16px;
-    color: white;
-    margin-right: 10px;
-    user-select: none;
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+  user-select: none;
 }
 
 /* Positioning the Toggle Container */
 .toggle-container {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+h2.bar_name {
+  color: white;
+}
+
+.bar_container h2.bar_name {
+  color: white !important;
 }
