@@ -2,7 +2,8 @@
 
 ![KneipenGuessr Logo](logo.png)
 
-A fun, interactive web game that tests your knowledge of bars in Karlsruhe, Germany.
+A fun, interactive web game that tests your knowledge of bars in Karlsruhe, Germany.\
+This is a student project as part of the Mobile Computing & IoT lecture at KIT.
 
 ## Overview
 
